@@ -15,3 +15,6 @@ La classe rep el email en el constructor però també te un set de manera que es
 La classe rep el password en el constructor però també te un set de manera que es pot reutilitzar la instància per a verificar un altre password.
 
 3 - He creat una nova classe anomenada `ConfirmEmail` que rep un email i te un mètode per enviar un mail de confirmació de registre al usuari i un altre mètode que verifica si l'usuari ha confirmat el registre des de el mail.
+
+4 - He creat una classe `Register` que s'encarrega del registre del usuari. Ara usuari només guarda les dades.
+
