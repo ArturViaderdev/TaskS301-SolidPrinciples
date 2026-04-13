@@ -1,44 +1,80 @@
-# 🏋️‍♀️ Exercicis SOLID
+# TaskS301 - Solid Principles
 
-> En aquest repositori trobaràs cada lletra dels principis SOLID representada amb codi Java que hauràs de refactoritzar per tal que compleixi correctament el principi corresponent.
+## Introduction
 
-### Per a acomplir aquesta tasca, hauràs de:
+The **SOLID principles** are a set of object-oriented design best practices that help create software that is more:
 
-- Crear un nou repositori a partir d'aquest **template repository**.
-- Navegar per les carpetes corresponents a cada principi.
-- Analitzar el codi problemàtic proporcionat.
-- Refactoritzar-lo per ajustar-lo al principi SOLID.
-- Cal escriure una explicació de les teves decisions.
+✅ Maintainable
+✅ Scalable
+✅ Readable
+✅ Robust
 
-## 📥 Com començar amb el template repository
+They were proposed by **Robert C. Martin (Uncle Bob)** and are widely used in professional software development.[^1][^2]
 
-> En comptes de clonar directament aquest repositori, hauràs de crear el teu propi repositori a partir d'aquest **template repository** per poder treballar còmodament i tenir el teu historial de canvis.
+🧠 **SOLID** is an acronym for the following 5 fundamental principles:
 
-1. Fes clic a **Use this template**.
-2. Crea un nou repositori amb el teu nom i la teva configuració.
-3. Després, clona el nou repositori creat al teu equip local amb:
 
- ```bash
-   git clone https://github.com/usuari/nom-del-teu-repositori.git
-   cd nom-del-teu-repositori
-```
+| Letter | Principle | Name in Catalan | Brief Description |
+| :-- | :-- | :-- | :-- |
+| S | Single Responsibility | Single Responsibility | Each class should have a single responsibility [^3][^4] |
+| O | Open/Closed | Open/Closed | Code should be open for extension but closed for modification |
+| L | Liskov Substitution | Liskov Substitution | Subclasses must be able to replace superclasses [^5][^6] |
+| I | Interface Segregation | Interface Segregation | Don't force dependency on unused interfaces |
+| D | Dependency Inversion | Dependency Inversion | Depend on abstractions, not concrete classes [^1] |
 
-## 🛠️ Com fer la tasca
+## Objective
 
-- 📖 Llegeix el fitxer README.md dins la carpeta del principi que vols estudiar.
-- 👀 Analitza la classe Java problemàtica proporcionada.
-- 🧠 Identifica com i per què aquesta classe incompleix el principi SOLID.
-- ✏️ Refactoritza la classe per tal que respecti correctament el principi.
-- 💬 Reflexiona sobre els canvis:
-1. Què estava malament?
-2. Per què incomplia el principi?
-3. Quina solució has aplicat i per què?
-- 📝 Escriu una breu explicació dins un fitxer EXPLICACIO.md a la mateixa carpeta de l’exercici.
+This [repository](https://github.com/IT-Academy-Back/S3-SOLID-JAVA) will help you learn and apply SOLID principles through practical exercises in Java.
 
-## 📤 Entrega
-> L'entrega es farà a través de Moodle.
+Each principle is located in its own folder:
+**S/** → Single Responsibility Principle
+**O/** → Open/Closed Principle
+**L/** → Liskov Substitution Principle
+**I/** → Interface Segregation Principle
+**D/** → Dependency Inversion Principle
 
-### Has d’enviar:
-- L'URL del teu repositori GitHub amb les tasques fetes.
-- i el nom de l’alumne que ha corregit el teu exercici.
+Inside each directory you'll find:
+
+- **README.md** with a clear explanation and simple examples.
+- A Java class that does **not** follow the principle.
+
+
+## How to Do the Task
+
+1. Read the **README.md** from the folder of the principle you want to study.
+2. Analyze the problematic Java class.
+3. Identify how it **violates** the principle.
+4. Refactor the class to **respect** the SOLID principle.
+5. Reflect and explain what was wrong, why it violated the principle, and why you applied your solution.
+6. Write a brief explanation in an **EXPLICACIO.md** file inside the exercise folder.
+
+## Level 1
+
+In this level you'll do the exercises from the **S/** and **D/** folders.
+
+You'll work with classes that do too many things at once or are tightly coupled to other components.
+Refactor them to separate responsibilities and use abstraction-based dependencies.
+
+## Level 2
+
+In this level you'll do the exercises from the **O/** and **I/** folders.
+
+You'll encounter code that needs modification to add functionality or interfaces that force useless method implementations.
+Refactor so the code is easily extensible without modifying it and create more specific interfaces.
+
+## Level 3
+
+In this level you'll do the exercise from the **L/** folder.
+
+You'll work with inheritances that break the expected behavior of the base class.
+Refactor to ensure all subclasses can be safely used as their parent class.
+
+## Important
+
+**Recommendations:**
+
+- Don't be afraid to experiment.
+- Practice is the best way to learn.
+- Compare your solution with your classmates'.
+- Use design patterns when helpful.
 
