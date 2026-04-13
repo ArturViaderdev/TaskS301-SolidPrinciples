@@ -19,13 +19,16 @@ public class User {
             {
                 emailVerify.verify();
                 passwordVerify.verify();
+                ConfirmEmail confirmEmail = new ConfirmEmail(email);
+                confirmEmail.confirm();
+                if(confirmEmail.checkConfirmed())
+                {
+                    System.out.println("User confirmed");
 
-                System.out.println("📧 Sending confirmation email to: " + email);
-
-                boolean userConfirmed = true;
-                if (!userConfirmed) {
-                    System.out.println("⚠️ User did not confirm registration.");
-                    return;
+                }
+                else
+                {
+                    System.out.println("User did not confirm registration.");
                 }
             }
             catch(IllegalArgumentException ex)
