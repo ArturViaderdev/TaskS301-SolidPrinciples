@@ -1,7 +1,12 @@
 public class ServicePerson {
-    public void savePerson(Person person) {
-        MySql mysql = new MySql();
-        mysql.savePerson(person);
+    private Database dbType;
+
+    public ServicePerson(Database dbType)
+    {
+        this.dbType = dbType;
     }
 
+    public void savePerson(Person person) {
+        dbType.savePerson(person);
+    }
 }
