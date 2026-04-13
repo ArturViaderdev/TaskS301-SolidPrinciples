@@ -6,4 +6,10 @@ La classe user tenia masses responsabilitats. En concret les responsabilitats qu
 - Enviar email de confirmació.
 - Verificar la confirmació del email.
 
-1- He creat una nova classe anomenada `EmailVerify` que te rep un email en el constructor i te un mètode que verifica el email. Si el email és incorrecte crea una excepció del tipus `IllegalArgumentException`.
+1- He creat una nova classe anomenada `EmailVerify` que rep un email en el constructor i te un mètode que verifica el email. Si el email és incorrecte crea una excepció del tipus `IllegalArgumentException`.
+
+La classe rep el email en el constructor però també te un set de manera que es pot reutilitzar la instància per a verificar un altre email.
+
+2 - He creat una nova classe anomenada `PasswordVerify` que rep un password en el constructor i te un mètode que verifica el password. Si el password és incorrecte crea una exepció del tipus `IllegalArgumentException`.
+
+La classe rep el password en el constructor però també te un set de manera que es pot reutilitzar la instància per a verificar un altre password.

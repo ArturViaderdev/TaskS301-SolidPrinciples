@@ -14,12 +14,11 @@ public class User {
 
     public void register() {
             EmailVerify emailVerify = new EmailVerify(email);
+            PasswordVerify passwordVerify = new PasswordVerify(password);
             try
             {
                 emailVerify.verify();
-                if (password == null || password.length() < 8 || !password.matches(".*[A-Z].*")) {
-                    throw new IllegalArgumentException("Password must be at least 8 characters long and contain an uppercase letter.");
-                }
+                passwordVerify.verify();
 
                 System.out.println("📧 Sending confirmation email to: " + email);
 
