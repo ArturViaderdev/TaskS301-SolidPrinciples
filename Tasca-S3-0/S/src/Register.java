@@ -1,43 +1,23 @@
 public class Register {
-    private User user;
-    public Register(User user)
+    public Register()
     {
-        this.user = user;
     }
 
-    public void register()
+    public User register(String name, String email, String password) throws IllegalArgumentException
     {
-        EmailVerify emailVerify = new EmailVerify(user.getEmail());
-        PasswordVerify passwordVerify = new PasswordVerify(user.getPassword());
-        try
+        EmailVerify emailVerify = new EmailVerify(email);
+        PasswordVerify passwordVerify = new PasswordVerify(password);
+        emailVerify.verify();
+        passwordVerify.verify();
+        ConfirmEmail confirmEmail = new ConfirmEmail(email);
+        confirmEmail.confirm();
+        if(confirmEmail.checkConfirmed())
         {
-            emailVerify.verify();
-            passwordVerify.verify();
-            ConfirmEmail confirmEmail = new ConfirmEmail(user.getEmail());
-            confirmEmail.confirm();
-            if(confirmEmail.checkConfirmed())
-            {
-                System.out.println("User confirmed");
-
-            }
-            else
-            {
-                System.out.println("User did not confirm registration.");
-            }
+            return new User(name,email,password);
         }
-        catch(IllegalArgumentException ex)
+        else
         {
-            System.out.println(ex.getMessage());
+            return null;
         }
-    }
-
-    public User getUser()
-    {
-        return user;
-    }
-
-    public void setUser(User user)
-    {
-        this.user = user;
     }
 }
